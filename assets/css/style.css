@@ -68,7 +68,17 @@ body{
     color: var(--color-primary);
 }
 
+.content-area{
+    flex-direction: column;
+}
+.main-content-area{
+    border: 1px solid red;
+    padding: 10px;
+}
 
+.sidebar-section{
+    border: 1px solid yellowgreen;
+}
 
 
 
@@ -100,5 +110,15 @@ body{
     }
     .navbar li{
         flex-grow: 1;
+    }
+    .content-area{
+        flex-direction: row;
+    }
+    .main-content-area{
+        flex: 1;
+    }
+    .sidebar-section{
+        flex-basis: 400px;
+        flex-basis: 0 0 400px;
     }
 }

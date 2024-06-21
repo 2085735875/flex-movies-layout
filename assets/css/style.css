@@ -68,16 +68,22 @@ body{
     color: var(--color-primary);
 }
 
+/*  main content css  */
+
+.sidebar-right{
+    background-color: #ededed;
+    padding: 20px;
+    /* width: 30%; */
+}
 .content-area{
     flex-direction: column;
+
 }
 .main-content-area{
-    padding: 10px;
+    padding: 20px;
 }
 
-.sidebar-section{
-    border: 1px solid yellowgreen;
-}
+
 
 /* css of posts section */
 .posts{
@@ -206,9 +212,80 @@ body{
     justify-content: center;
 }
 
+.img-fluid, .gallary-img img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
 
+/* ############## Gallary css ########### */
 
+.gallary-imgs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+}
 
+.gallary-img{
+    margin: 0 0 8px 8px;
+    height: 250px;
+    flex-grow: 1;
+}
+
+.gallary-img img{
+    height: 100%;
+}
+
+.gallary-img:nth-child(4n + 1){
+    flex-basis: 250px;
+}
+.gallary-img:nth-child(4n + 2){
+    flex-basis: 325px ;
+}
+.gallary-img:nth-child(4n + 3){
+    flex-basis: 175px;
+}
+.gallary-img:nth-child(4n + 4){
+    flex-basis: 380px;
+}
+
+/* ############## Sidebar css ########### */
+
+.widget{
+    background-color: #ededed;
+    /* margin-bottom: 20px; */
+}
+.widget-content{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.widget-content h3{
+    margin-bottom: 7px;
+}
+
+.siderbar-menu ul  {
+    list-style: none;
+}
+.siderbar-menu ul  a{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    padding: 2px 12px;
+    
+}
+
+/* ############## Footer css ########### */
+
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
 
 
 
@@ -251,6 +328,9 @@ body{
 
 
 @media all and (min-width: 1180px){
+    .content-area{
+        display: flex;
+    }
     .navbar ul{
         display: flex;
     }
@@ -263,7 +343,7 @@ body{
     .main-content-area{
         flex-grow: 1;
     }
-    .sidebar-section{
+    .sidebar-right{
         /* flex-basis: 400px; */
         flex: 0 0 400px;
     }
@@ -281,3 +361,16 @@ body{
         width: 100%;
     }
 }
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .widget{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .widget-content{
+        flex-basis: 47%;
+    }
+   
+} 
+
